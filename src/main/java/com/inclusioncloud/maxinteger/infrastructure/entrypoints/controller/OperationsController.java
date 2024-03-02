@@ -32,7 +32,7 @@ import java.util.List;
  * development environments. For production, it is recommended to restrict the origins and HTTP methods for security reasons.</p>
  */
 @RestController
-@RequestMapping("/api/v1/operation")
+@RequestMapping("/operation")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {})
 public class OperationsController {
 
