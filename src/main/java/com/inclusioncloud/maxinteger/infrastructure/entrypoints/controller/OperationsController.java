@@ -25,11 +25,6 @@ import java.util.List;
  * The {@code OperationsController} class handles incoming REST API requests related to operations.
  * It manages endpoints for calculating the maximum non-negative integer k based on given parameters
  * and for retrieving all past calculation results.
- *
- * <p>This controller is annotated with {@link CrossOrigin} to enable CORS (Cross-Origin Resource Sharing).
- * This allows web applications hosted on different domains to interact with this service. The current configuration
- * allows requests from any origin ('*'), accepting any header, and permits all HTTP methods, which is suitable for
- * development environments. For production, it is recommended to restrict the origins and HTTP methods for security reasons.</p>
  */
 @RestController
 @RequestMapping("/operation")

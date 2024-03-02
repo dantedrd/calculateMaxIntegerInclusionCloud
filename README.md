@@ -1,7 +1,7 @@
-# Test Ficohsa
+# Max-Integer-Inclusion-Cloud-BACK
 
 ## Descripción
-Es una aplicación Spring Boot desarrollada para buscar items atraves de una API REST.
+Es una aplicación Spring Boot desarrollada para calcular el maximo numero  dado `x`, `y` y `n` y mostrar el valor calculado k a través de un  API REST.
 
 ## Características
 - **Spring Boot 3.2.1**: Framework para facilitar la configuración y despliegue.
@@ -28,17 +28,6 @@ como vemos en este pequeño diagrama
 
 ![Diagrama](diagrama.png)
 
-## Despliegue de la aplicacion
-- **1**: La aplicacion se deplego usando una maquina ec2 de aws y usando docker.
-- **red-docker**: Se crea una red local de docker por la cual el front gracias que 
-se usa nextjs se comunica directamente con los servicios y entrega las pantallas por server y renderiza las pantallas por
-Server-side Rendering
-
-![Diagrama](infra.png)
-
-
-
-
 ## Requisitos
 - Java 17
 
@@ -51,14 +40,14 @@ Server-side Rendering
 
 ## Uso de la API
 La aplicación expone dos endpoints principales:
-1. **GET /api/v1/items/:id**: Busca item por un id especifico.
-   - **Cuerpo de la petición**: JSON con los campos del item.
+1. **GET /api/v1/operation**: Este endpoint realiza el calculo del maximo entero,guarda el resultado en base de datos y entrega el resultado .
+   - **Cuerpo de la petición**: JSON con los parametros necesarios para realizar el calculo.
    - **Respuesta**: JSON con el resultado.
 
-2. **GET /api/v1/items/search?name=da&total=1**: Busca items por un parmetro de busqueda y muestra un total maximo dado.
+2. **GET /api/v1/operation**: Esta api permite ver todos los resultados de los calculados realizados y guardados.
    - **Respuesta**: JSON con el resultado.
 
-La documentación detallada de la API y los esquemas de solicitud y respuesta están disponibles a través de la interfaz de [Swagger](http://52.21.129.164:8081/api/v1/swagger-ui/index.html#/).
+La documentación detallada de la API y los esquemas de solicitud y respuesta están disponibles a través de la interfaz de [Swagger](http://44.209.242.173/api/v1/swagger-ui/index.html#/operations-controller/result).
 
 ## Pruebas
 Las pruebas unitarias se pueden ejecutar mediante el comando:
